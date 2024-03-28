@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+
+
+## Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 300, 400, 600
+
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+
+  --soft-red: hsl(0, 93%, 68%);
+
+  --dark-grayish-red: hsl(0, 6%, 24%);
+
+  --gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+
+  --gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 2fr 1fr;
+}
+
+.container .left {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+}
+
+.container .right {
+  width: 100%;
+}
+
+.container .right img {
+  display: block;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.container .left .top img {
+  margin-bottom: 10rem;
+}
+
+.container .left .top h1 {
+  font-size: 3.5rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+.container .left .top h1 span {
+  color: var(--desaturated-red);
+  font-weight: 500 !important;
+}
+
+.container .left .top p {
+  color: var(--desaturated-red);
+  font-weight: 600;
+  line-height: 2rem;
+  margin-bottom: 10rem;
+}
+
+.container .left .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.container .left .bottom input {
+  border: 1px solid var(--desaturated-red);
+  opacity: 0.6;
+  border-radius: 2.5rem;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.container .left .bottom input::placeholder {
+  color: var(--desaturated-red);
+}
+
+.container .left .bottom button {
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--desaturated-red);
+  padding: 2.125rem 2.75rem;
+  height: 2.85rem;
+  transform: translateX(-45px);
+  cursor: pointer;
+}
+
+.container .left .bottom button img {
+  transform: translateY(-10px);
+}
